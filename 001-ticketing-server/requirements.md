@@ -4,7 +4,7 @@
 
 - [SDC-001: Design a Ticketing Server](#sdc-001-design-a-ticketing-server)
   - [Overview](#overview)
-  - [Success Criteria](#success-criteria)
+  - [Acceptance Criteria](#acceptance-criteria)
   - [Functional API](#functional-api)
   - [Admission Policy](#admission-policy)
   - [Non-Functional Requirements](#non-functional-requirements)
@@ -13,18 +13,16 @@
   - [Common Pitfalls](#common-pitfalls)
   - [Optional Extensions](#optional-extensions)
   - [Out of Scope / Assumptions](#out-of-scope--assumptions)
-  - [Reflection Prompts](#reflection-prompts)
+  - [Follow-Up Discussion](#follow-up-discussion)
   - [Time Guidance](#time-guidance)
 
 ## Overview
 
 Build a Go service that meters access to a scarce resource under heavy load. The
 service behaves like a virtual waiting room: users enter a queue, retain their
-relative order, and are admitted at a controlled rate. Treat this as a
-standalone practice challenge—work solo or have a partner review your solution
-using the signals below.
+relative order, and are admitted at a controlled rate.
 
-## Success Criteria
+## Acceptance Criteria
 
 1. Guarantee fairness (strict FIFO) while handling bursty traffic.
 2. Keep concurrency control simple, correct, and observable.
@@ -106,7 +104,7 @@ Tokens should live 1–5 minutes and be issued at most once per request.
 - No payments, ticket inventory management, or UI/front-end components.
 - No per-IP fairness policies unless you explicitly add them as a stretch goal.
 
-## Reflection Prompts
+## Follow-Up Discussion
 
 - Scaling strategy across multiple nodes while maintaining order.
 - Ordering guarantees in distributed systems with partial failures.
